@@ -1,11 +1,12 @@
-let secretnumber = Math.floor(Math.random()*10)+1;
+let maxNumber = prompt("máximo number")
+let secretnumber = Math.floor(Math.random()*maxNumber)+1;
 let usernumber = 0;
 let cont = 1;
 //let typecont= 'vez';
 let maxIntentos = 4;
 console.log(secretnumber);
 while(usernumber != secretnumber){
-    usernumber = parseInt(prompt("Indica un número entre 1 y 10"));
+    usernumber = parseInt(prompt(`Indica un número entre 1 y ${maxNumber}`));
     console.log(usernumber);
     if(usernumber == secretnumber){
         alert(`Acertaste, el número es: ${usernumber}. Lo lograstes en ${cont}  ${cont == 1 ? 'vez' : 'veces'}`); 
@@ -18,7 +19,7 @@ while(usernumber != secretnumber){
         cont = cont + 1;
         //typecont = ' veces';
         if(cont >  maxIntentos){
-            alert(`Llegaste al máximo número de intentos ${maxIntentos}`);
+            alert(`Llegaste al máximo número de intentos ${maxIntentos}. El número era: ${secretnumber}`);
             break;
         }
     /*  alert("El número era " + secretnumber + ",  elegistes " + usernumber); */
@@ -132,7 +133,7 @@ while(cont2 <= numero ){
 
 //challengue 4
 //####################################################
-console.log("Bienvenido estimado ");
+/* console.log("Bienvenido estimado ");
 
 let name = 'Abdiel';
 console.log(`!Hola¡ ${name}`);
@@ -186,5 +187,5 @@ console.log(nramdo);
 let nramd2 = Math.floor(Math.random()*10);
 console.log(nramd2)+1;
 let nfullrando = Math.floor(Math.random()*1000)+1;
-console.log(nfullrando);
+console.log(nfullrando); */
 //####################################################
